@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/vehicles/super_galeb"
+	"$nocull" 1
+	//"$envmap" "env_cubemap"
+	//"$basealphaenvmapmask" 1
+}

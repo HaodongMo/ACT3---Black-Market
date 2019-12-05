@@ -1,0 +1,1 @@
+util.AddNetworkString( "ACT3_BM_SendMoneyAmount" )
