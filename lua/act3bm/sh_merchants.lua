@@ -24,6 +24,10 @@ ACT3_BlackMarket.IndexToMerchant = {}
 --    text = ""
 -- }
 
+function ACT3_BlackMarket:CanUseMerchant(ply, merchant)
+   return true
+end
+
 function ACT3_BlackMarket:LoadItemToMerchant(tbl)
    if !ACT3_BlackMarket.Merchants[tbl.merchant] then
       ACT3_BlackMarket.Merchants[tbl.merchant] = {}
@@ -55,7 +59,11 @@ end
 
 ACT3_BlackMarket.GetEntriesForMerchant = function(merchant, subcat)
 
-   if !ACT3_BlackMarket.Merchants[merchant] then return nil end
+   if !ACT3_BlackMarket.Merchants[merchant] then return end
+
+   if !ACT3_BlackMarket:CanUseMerchant(LocalPlayer(), merchant) then
+      return
+   end
 
    if !subcat then
       local entries = {}
@@ -154,11 +162,16 @@ ACT3_BlackMarket.GetEntriesForMerchant = function(merchant, subcat)
                end,
                entertext = "Buy",
                endpoint = false,
-               submode = 0
+               submode = 0,
+               cost = k.cost
             })
          end
 
-         table.SortByMember(entries, "title", true)
+         if subcat == "Weapons" then
+            table.SortByMember(entries, "cost", true)
+         else
+            table.SortByMember(entries, "title", true)
+         end
       end
 
       if table.Count(entries) == 0 then

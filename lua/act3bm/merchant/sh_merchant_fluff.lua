@@ -13,10 +13,10 @@ ACT3_BlackMarket:LoadItemToMerchant({
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
-   merchant = "Sherrif",
+   merchant = "Sheriff",
    fluff = true,
    title = "About",
-   text = "Is it so hard to understand that I just want to bring the right of self-defense to the people of the world? The governments around us call what I do 'illegal', but if you ask me, they're the ones illegally infringing on our personal sovereignty! Everything in my store is at least 80% made in the USA, and 100% endorsed by the greatest nation on Earth! THAT MEANS AMERICA."
+   text = "My aim is simply to provide to the people of the world the right they have been so wrongfully denied - the right to self-defense. The government calls my services illegal, but as George Washington, or, uh, one of those guys, once said: When tyranny becomes law, resistance becomes duty!"
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({

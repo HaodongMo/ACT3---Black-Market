@@ -48,6 +48,51 @@ ACT3_BlackMarket.CartScreen = function(item, ent, cost, data)
       {title = "Remove ALL From Cart", entertext = "Remove", enterfunc = function() ACT3_BlackMarket.RemoveFromCart(item, math.huge) end},
    }
 
+   if data.saletype == "AMMO" or data.saletype == "ATT" or data.extrainfo then
+      entries[3] = {
+         title = "More Info",
+         entertext = "See",
+         submode = 1,
+         enterfunc = function()
+            if data.saletype == "AMMO" or data.saletype == "ATT" then
+               local thing = nil
+               if data.saletype == "AMMO" then
+                  local act3name = string.sub(data.class, 11)
+                  print(act3name)
+                  local bulletid = ACT3_GetBulletID(act3name)
+                  if bulletid then
+                     local bullet = ACT3_GetBullet(bulletid)
+                     if bullet then
+                        thing = bullet
+                        PrintTable(thing)
+                     end
+                  end
+               else
+                  local act3name = string.sub(data.class, 10)
+                  local att = ACT3_GetAttachment(act3name)
+                  if att then
+                     thing = att
+                  end
+               end
+
+               if thing and thing.Description then
+                  return {
+                     endpoint = true,
+                     content = ACT3_BlackMarket:LineTextMultiBlock(thing.Description, "ACT3BM_LCD_10", ScreenScale(500) * 0.37 + ScreenScale(8))
+                  }
+               else
+                  return nil
+               end
+            else
+               return {
+                  endpoint = true,
+                  content = ACT3_BlackMarket:LineTextBlock(data.extrainfo, "ACT3BM_LCD_10", ScreenScale(500) * 0.37 + ScreenScale(8))
+               }
+            end
+         end,
+      }
+   end
+
    return entries
 end
 
