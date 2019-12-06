@@ -1,3 +1,8 @@
+--[[
+	Granny has antique weapons from WWII et al.
+	Excludes US WWII weapons - those are moved to Sheriff.
+]]
+
 -- Pistols
 ACT3_BlackMarket:LoadItemToMerchant({ -- C96
    merchant = "Granny",
