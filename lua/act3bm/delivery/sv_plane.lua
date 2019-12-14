@@ -35,15 +35,42 @@ function ACT3_BlackMarket:SendDeliveryPlane(pos, cart)
       if !IsValid(crate) then return end
 
       local contents = {}
-
-      PrintTable(cart)
+      local ammocontents = {}
+      local attcontents = {}
 
       for _, k in pairs(cart) do
          if !k.purchase then continue end
          if k.amt == 0 then continue end
-         contents[k.purchase.class] = k.amt
+
+         if k.purchase.saletype == "AMMO" then
+            local ammotype = k.purchase.class
+
+            print(string.sub(k.purchase.class, 1, 10))
+
+            if string.sub(k.purchase.class, 1, 10) == "act3_ammo_" then
+               ammotype = string.sub(k.purchase.class, 11)
+            end
+
+            local bulletid = ACT3_GetBulletID(ammotype)
+            local bullet = ACT3_GetBullet(bulletid)
+
+            if bullet then
+               ammocontents[ammotype] = k.amt * (k.purchase.quantity or 1) * (k.purchase.ammoquantity or (bullet.GiveCount or 24))
+            end
+         elseif k.purchase.saletype == "ATT" then
+            local atttype = k.purchase.class
+
+            if string.sub(k.purchase.class, 1, 9) == "act3_att_" then
+               atttype = string.sub(k.purchase.class, 10)
+            end
+            attcontents[atttype] = k.amt * (k.purchase.quantity or 1)
+         else
+            contents[k.purchase.class] = k.amt * (k.purchase.quantity or 1)
+         end
       end
 
+      crate.AmmoContents = ammocontents
+      crate.AttContents = attcontents
       crate.Contents = contents
 
       crate:SetPos(wtr.HitPos + Vector(0, 0, -32))

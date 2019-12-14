@@ -41,3 +41,33 @@ function metaply:ACT3BM_TakeMoney(amt)
         return true
     end
 end
+
+concommand.Add( "act3bm_resetmoney", function(ply, cmd, args)
+    if !ply:IsSuperAdmin() then return end
+
+    for _, p in pairs(player.GetAll()) do
+        if p:Nick() == args[1] then
+            local money = ply:ACT3BM_GetMoney()
+            p:ACT3BM_TakeMoney(money)
+            p:ACT3BM_GiveMoney(ACT3_BlackMarket.StartMoney)
+            print("Reset money for: " .. p:Nick())
+            return
+        end
+    end
+
+    print("No player found named " .. args[1])
+end )
+
+concommand.Add( "act3bm_givemoney", function(ply, cmd, args)
+    if !ply:IsSuperAdmin() then return end
+
+    for _, p in pairs(player.GetAll()) do
+        if p:Nick() == args[1] then
+            p:ACT3BM_GiveMoney(tonumber(args[2]))
+            print("Gave " .. p:Nick() .. " $" .. args[2])
+            return
+        end
+    end
+
+    print("No player found named " .. args[1])
+end )

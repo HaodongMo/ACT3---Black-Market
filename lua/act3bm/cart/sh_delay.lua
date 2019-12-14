@@ -1,5 +1,5 @@
 ACT3_BlackMarket.NextCanOrderTime = 0
-ACT3_BlackMarket.OrderDelayTime = 30
+ACT3_BlackMarket.OrderDelayTime = 5
 
 if SERVER then
 

@@ -9,6 +9,8 @@ ENT.Spawnable 			= false
 AddCSLuaFile()
 
 ENT.Contents = {}
+ENT.AttContents = {}
+ENT.AmmoContents = {}
 
 ENT.SoundImpact = "Wood.ImpactSoft"
 ENT.SoundImpactHard = "Wood.ImpactHard"
@@ -34,7 +36,7 @@ function ENT:Initialize()
 
       self:PrecacheGibs()
 
-      self:SetHealth(10)
+      self:SetHealth(150)
 
    else
 
@@ -61,15 +63,34 @@ function ENT:OnTakeDamage(dmg)
       self.SpawnedContents = true
       self:GibBreakClient(Vector(0, 0, 0))
       self:EmitSound("physics/wood/wood_plank_break" .. math.random(1,4) .. ".wav")
+
       for class, qty in pairs(self.Contents) do
          if qty > 0 then
             for _ = 1, qty do
                local newent = ents.Create(class)
-               newent:SetPos(self:GetPos() + VectorRand() + Vector(0, 0, 8))
+               newent.ACT3_DoNotSpawnWithAtts = true
+               newent:SetPos(self:GetPos() + (VectorRand() * 8) + Vector(0, 0, 16))
                newent:SetAngles(AngleRand())
                newent:Spawn()
             end
          end
+      end
+
+      if table.Count(self.AmmoContents) > 0 then
+         local ammocontainer = ents.Create("act3_ammopack")
+         ammocontainer.GiveBullets = self.AmmoContents
+         ammocontainer.Model = "models/Items/BoxMRounds.mdl"
+         ammocontainer:SetPos(self:GetPos() + (VectorRand() * 8) + Vector(0, 0, 16))
+         ammocontainer:SetAngles(AngleRand())
+         ammocontainer:Spawn()
+      end
+
+      if table.Count(self.AttContents) > 0 then
+         local attcontainer = ents.Create("act3_attachment")
+         attcontainer.GiveAttachments = self.AttContents
+         attcontainer:SetPos(self:GetPos() + (VectorRand() * 8) + Vector(0, 0, 16))
+         attcontainer:SetAngles(AngleRand())
+         attcontainer:Spawn()
       end
 
       self:Remove()
@@ -86,7 +107,7 @@ function ENT:PhysicsCollide(colData, collider)
       self:EmitSound(self.SoundImpact)
    end
 
-   self:TakeDamage(100, self, self)
+   self:TakeDamage(125, self, self)
 end
 
 function ENT:OnRemove()
