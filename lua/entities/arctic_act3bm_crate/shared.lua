@@ -10,6 +10,7 @@ AddCSLuaFile()
 
 ENT.Contents = {}
 ENT.AttContents = {}
+ENT.MagContents = {}
 ENT.AmmoContents = {}
 
 ENT.SoundImpact = "Wood.ImpactSoft"
@@ -72,6 +73,25 @@ function ENT:OnTakeDamage(dmg)
                newent:SetPos(self:GetPos() + (VectorRand() * 8) + Vector(0, 0, 16))
                newent:SetAngles(AngleRand())
                newent:Spawn()
+            end
+         end
+      end
+
+      if table.Count(self.MagContents) > 0 then
+         for mag, qty in pairs(self.MagContents) do
+            if qty > 0 then
+               local magtbl = ACT3_GetMagazineType(mag)
+               for _ = 1, qty do
+                  local nm = ents.Create("act3_magazine")
+                  nm.DefaultLoad = magtbl.DefaultLoad
+                  nm.MagazineTable = {
+                     Type = mag,
+                     Rounds = {}
+                  }
+                  nm:SetPos(self:GetPos() + (VectorRand() * 8) + Vector(0, 0, 16))
+                  nm:SetAngles(AngleRand())
+                  nm:Spawn()
+               end
             end
          end
       end

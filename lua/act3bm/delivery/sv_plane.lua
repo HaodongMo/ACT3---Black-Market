@@ -37,6 +37,7 @@ function ACT3_BlackMarket:SendDeliveryPlane(pos, cart)
       local contents = {}
       local ammocontents = {}
       local attcontents = {}
+      local magcontents = {}
 
       for _, k in pairs(cart) do
          if !k.purchase then continue end
@@ -64,6 +65,13 @@ function ACT3_BlackMarket:SendDeliveryPlane(pos, cart)
                atttype = string.sub(k.purchase.class, 10)
             end
             attcontents[atttype] = k.amt * (k.purchase.quantity or 1)
+         elseif k.purchase.saletype == "MAG" then
+            local magtype = k.purchase.class
+
+            if string.sub(k.purchase.class, 1, 9) == "act3_mag_" then
+               magtype = string.sub(k.purchase.class, 10)
+            end
+            magcontents[magtype] = k.amt * (k.purchase.quantity or 1)
          else
             contents[k.purchase.class] = k.amt * (k.purchase.quantity or 1)
          end
@@ -71,6 +79,7 @@ function ACT3_BlackMarket:SendDeliveryPlane(pos, cart)
 
       crate.AmmoContents = ammocontents
       crate.AttContents = attcontents
+      crate.MagContents = magcontents
       crate.Contents = contents
 
       crate:SetPos(wtr.HitPos + Vector(0, 0, -32))
