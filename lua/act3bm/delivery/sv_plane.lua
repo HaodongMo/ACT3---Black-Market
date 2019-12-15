@@ -46,8 +46,6 @@ function ACT3_BlackMarket:SendDeliveryPlane(pos, cart)
          if k.purchase.saletype == "AMMO" then
             local ammotype = k.purchase.class
 
-            print(string.sub(k.purchase.class, 1, 10))
-
             if string.sub(k.purchase.class, 1, 10) == "act3_ammo_" then
                ammotype = string.sub(k.purchase.class, 11)
             end

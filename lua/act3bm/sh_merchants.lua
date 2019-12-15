@@ -102,13 +102,7 @@ ACT3_BlackMarket.GetEntriesForMerchant = function(merchant, subcat)
 
       for _, k in pairs(ACT3_BlackMarket.Merchants[merchant]) do
          if k.category == subcat then
-            local ent
-
-            if k.saletype == "WPN" then
-               ent = weapons.Get(k.class)
-            else
-               ent = scripted_ents.Get(k.class)
-            end
+            local ent = ACT3_BlackMarket:SanitizeSale(k)
 
             if !ent then continue end
 

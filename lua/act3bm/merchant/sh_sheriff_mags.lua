@@ -19,6 +19,24 @@ ACT3_BlackMarket:LoadItemToMerchant({
 ACT3_BlackMarket:LoadItemToMerchant({
    merchant = "Sheriff",
    category = "Magazines",
+   class = "act3_mag_m10_16",
+   quantity = 1,
+   saletype = "MAG",
+   cost = 25,
+})
+
+ACT3_BlackMarket:LoadItemToMerchant({
+   merchant = "Sheriff",
+   category = "Magazines",
+   class = "act3_mag_m10_32",
+   quantity = 1,
+   saletype = "MAG",
+   cost = 125,
+})
+
+ACT3_BlackMarket:LoadItemToMerchant({
+   merchant = "Sheriff",
+   category = "Magazines",
    class = "act3_mag_m249_100",
    quantity = 1,
    saletype = "MAG",

@@ -33,7 +33,22 @@ ACT3_BlackMarket.CartScreen = function(item, ent, cost, data)
       {title = ent.PrintName, entertext = ""},
       {title = function()
          local amt = ACT3_BlackMarket.GetCartItemQuantity(item) or 0
-         return "QTY: " .. tostring(amt) end,
+
+         local txt = "QTY: " .. tostring(amt)
+
+         if data.saletype == "AMMO" then
+            local ammotype = data.class
+
+            if string.sub(data.class, 1, 10) == "act3_ammo_" then
+               ammotype = string.sub(data.class, 11)
+            end
+
+            local bulletid = ACT3_GetBulletID(ammotype)
+            local bullet = ACT3_GetBullet(bulletid)
+            txt = txt .. " (x" .. tostring(data.ammoquantity or (bullet.GiveCount or 24)) .. ")"
+         end
+
+         return txt end,
       entertext = ""},
       {title = "", entertext = ""},
       {title = function()
@@ -118,13 +133,7 @@ ACT3_BlackMarket.ViewFullCart = function()
    for class, k in pairs(ACT3_BlackMarket.LocalCart) do
       if k.amt == 0 then continue end
 
-      local ent
-
-      if k.data.saletype == "WPN" then
-         ent = weapons.Get(class)
-      else
-         ent = scripted_ents.Get(class)
-      end
+      local ent = ACT3_BlackMarket:SanitizeSale(k.data)
 
       local pname = ent.PrintName
 
