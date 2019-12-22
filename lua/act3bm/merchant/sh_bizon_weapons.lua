@@ -4,7 +4,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ak",
    quantity = 1,
    saletype = "WPN",
-   cost = 500,
+   cost = 900,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -13,7 +13,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ak_akmsu",
    quantity = 1,
    saletype = "WPN",
-   cost = 700,
+   cost = 1100,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -22,7 +22,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ar_adar15",
    quantity = 1,
    saletype = "WPN",
-   cost = 450,
+   cost = 550,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -31,7 +31,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ak_draco",
    quantity = 1,
    saletype = "WPN",
-   cost = 475,
+   cost = 675,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -40,7 +40,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ak_svk",
    quantity = 1,
    saletype = "WPN",
-   cost = 800,
+   cost = 1400,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -49,7 +49,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_m3_hunter",
    quantity = 1,
    saletype = "WPN",
-   cost = 450,
+   cost = 750,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -58,5 +58,5 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_rpg7",
    quantity = 1,
    saletype = "WPN",
-   cost = 1750,
+   cost = 2000,
 })
