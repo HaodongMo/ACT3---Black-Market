@@ -170,7 +170,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ammo_atxa2_frag",
    quantity = 1,
    saletype = "AMMO",
-   cost = 500,
+   cost = 1200,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -179,7 +179,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ammo_atxa2_heat",
    quantity = 1,
    saletype = "AMMO",
-   cost = 700,
+   cost = 5000,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -188,5 +188,5 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ammo_atxa2_sam",
    quantity = 1,
    saletype = "AMMO",
-   cost = 700,
+   cost = 5500,
 })

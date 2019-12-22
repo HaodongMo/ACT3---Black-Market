@@ -9,7 +9,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- USP
    class = "act3_usp",
    quantity = 1,
    saletype = stype,
-   cost = 120,
+   cost = 250,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- FiveseveN
@@ -28,7 +28,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- MP5
    class = "act3_mp5",
    quantity = 1,
    saletype = stype,
-   cost = 350,
+   cost = 550,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- MP5SD
@@ -37,7 +37,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- MP5SD
    class = "act3_mp5_mp5sd",
    quantity = 1,
    saletype = stype,
-   cost = 375,
+   cost = 575,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- UMP-45
@@ -46,7 +46,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- UMP-45
    class = "act3_ump",
    quantity = 1,
    saletype = stype,
-   cost = 400,
+   cost = 600,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- AUG Para
@@ -55,7 +55,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- AUG Para
    class = "act3_aug_para",
    quantity = 1,
    saletype = stype,
-   cost = 600,
+   cost = 550,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- P90
@@ -64,7 +64,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- P90
    class = "act3_p90",
    quantity = 1,
    saletype = stype,
-   cost = 800,
+   cost = 850,
 })
 
 -- AR/BRs
@@ -74,7 +74,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- G3K CQB
    class = "act3_g3_g3ka3",
    quantity = 1,
    saletype = stype,
-   cost = 450,
+   cost = 1250,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- G3
@@ -83,7 +83,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- G3
    class = "act3_g3",
    quantity = 1,
    saletype = stype,
-   cost = 500,
+   cost = 1100,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- G3SG/1
@@ -92,7 +92,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- G3SG/1
    class = "act3_g3_g3sg1",
    quantity = 1,
    saletype = stype,
-   cost = 650,
+   cost = 1650,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- SG552
@@ -101,7 +101,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- SG552
    class = "act3_sg552_552",
    quantity = 1,
    saletype = stype,
-   cost = 600,
+   cost = 1050,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- SG550
@@ -110,7 +110,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- SG550
    class = "act3_sg552",
    quantity = 1,
    saletype = stype,
-   cost = 700,
+   cost = 950,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- AUG
@@ -119,16 +119,16 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- AUG
    class = "act3_aug",
    quantity = 1,
    saletype = stype,
-   cost = 800,
+   cost = 1550,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- AUG A3
    merchant = merch,
    category = cat,
-   class = "act3_aug",
+   class = "act3_aug_a3",
    quantity = 1,
    saletype = stype,
-   cost = 850,
+   cost = 1650,
 })
 
 -- Shotty
@@ -138,7 +138,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- M3
    class = "act3_m3",
    quantity = 1,
    saletype = stype,
-   cost = 400,
+   cost = 600,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- M1014
@@ -147,7 +147,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- M1014
    class = "act3_m1014",
    quantity = 1,
    saletype = stype,
-   cost = 750,
+   cost = 1200,
 })
 
 -- Sniper/Heavy
@@ -157,7 +157,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- Scout
    class = "act3_scout",
    quantity = 1,
    saletype = stype,
-   cost = 1200,
+   cost = 1400,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- PSG-1
@@ -166,7 +166,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- PSG-1
    class = "act3_g3_psg",
    quantity = 1,
    saletype = stype,
-   cost = 1350,
+   cost = 2350,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- AWP
@@ -175,7 +175,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- AWP
    class = "act3_awp",
    quantity = 1,
    saletype = stype,
-   cost = 2000,
+   cost = 3500,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- AUG HBAR
@@ -184,7 +184,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- AUG HBAR
    class = "act3_aug_hbar",
    quantity = 1,
    saletype = stype,
-   cost = 1200,
+   cost = 1750,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- MG3
@@ -193,7 +193,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- MG3
    class = "act3_mg3",
    quantity = 1,
    saletype = stype,
-   cost = 1600,
+   cost = 5650,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- ATX-A2
@@ -202,5 +202,5 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- ATX-A2
    class = "act3_atxa2",
    quantity = 1,
    saletype = stype,
-   cost = 2500,
+   cost = 9500,
 })

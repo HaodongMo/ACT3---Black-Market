@@ -37,7 +37,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ammo_8mmk_fmj",
    quantity = 1,
    saletype = "AMMO",
-   cost = 125,
+   cost = 325,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -46,7 +46,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ammo_8mmk_trg",
    quantity = 1,
    saletype = "AMMO",
-   cost = 125,
+   cost = 325,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -65,7 +65,7 @@ ACT3_BlackMarket:LoadItemToMerchant({
    class = "act3_ammo_762x51_fmj",
    quantity = 1,
    saletype = "AMMO",
-   cost = 150,
+   cost = 450,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -83,8 +83,9 @@ ACT3_BlackMarket:LoadItemToMerchant({
    category = "Ammo",
    class = "act3_ammo_13x92tuf_ap",
    quantity = 1,
+   ammoquantity = 5,
    saletype = "AMMO",
-   cost = 200,
+   cost = 500,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
@@ -92,8 +93,9 @@ ACT3_BlackMarket:LoadItemToMerchant({
    category = "Ammo",
    class = "act3_ammo_13x92tuf_he",
    quantity = 1,
+   ammoquantity = 5,
    saletype = "AMMO",
-   cost = 200,
+   cost = 650,
 })
 
 -- Musket Balls

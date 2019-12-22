@@ -73,13 +73,11 @@ ACT3_BlackMarket.CartScreen = function(item, ent, cost, data)
                local thing = nil
                if data.saletype == "AMMO" then
                   local act3name = string.sub(data.class, 11)
-                  print(act3name)
                   local bulletid = ACT3_GetBulletID(act3name)
                   if bulletid then
                      local bullet = ACT3_GetBullet(bulletid)
                      if bullet then
                         thing = bullet
-                        PrintTable(thing)
                      end
                   end
                else

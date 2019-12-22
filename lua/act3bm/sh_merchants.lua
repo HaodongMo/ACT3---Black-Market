@@ -169,7 +169,7 @@ ACT3_BlackMarket.GetEntriesForMerchant = function(merchant, subcat)
       end
 
       if table.Count(entries) == 0 then
-         PrintTable(entries)
+         -- PrintTable(entries)
          entries = {
             {title = "No Items Available"}
          }

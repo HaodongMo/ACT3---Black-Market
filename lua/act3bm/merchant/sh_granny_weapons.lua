@@ -10,7 +10,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- C96
    class = "act3_c96",
    quantity = 1,
    saletype = "WPN",
-   cost = 75,
+   cost = 100,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- P1
@@ -19,7 +19,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- P1
    class = "act3_p1",
    quantity = 1,
    saletype = "WPN",
-   cost = 100,
+   cost = 200,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- K98 Obrez
@@ -28,7 +28,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- K98 Obrez
    class = "act3_k98_obrez",
    quantity = 1,
    saletype = "WPN",
-   cost = 75,
+   cost = 225,
 })
 
 -- Carbines/SMGs
@@ -38,7 +38,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- C96 Carbine
    class = "act3_c96_carbine",
    quantity = 1,
    saletype = "WPN",
-   cost = 125,
+   cost = 250,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- M712
@@ -47,7 +47,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- M712
    class = "act3_c96_m712",
    quantity = 1,
    saletype = "WPN",
-   cost = 175,
+   cost = 300,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- MP40
@@ -56,7 +56,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- MP40
    class = "act3_mp40",
    quantity = 1,
    saletype = "WPN",
-   cost = 300,
+   cost = 325,
 })
 
 
@@ -67,7 +67,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- K98
    class = "act3_k98",
    quantity = 1,
    saletype = "WPN",
-   cost = 400,
+   cost = 600,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- Musket
@@ -76,7 +76,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- Musket
    class = "act3_musket",
    quantity = 1,
    saletype = "WPN",
-   cost = 200,
+   cost = 50,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- K98 Sniper
@@ -85,7 +85,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- K98 Sniper
    class = "act3_k98_sniper",
    quantity = 1,
    saletype = "WPN",
-   cost = 600,
+   cost = 1100,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- Tankgewehr
@@ -94,7 +94,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- Tankgewehr
    class = "act3_tgewehr",
    quantity = 1,
    saletype = "WPN",
-   cost = 800,
+   cost = 2250,
 })
 
 -- Assault Rifles
@@ -104,7 +104,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- StG44
    class = "act3_stg44",
    quantity = 1,
    saletype = "WPN",
-   cost = 500,
+   cost = 850,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- StG44 PDW
@@ -113,7 +113,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- StG44 PDW
    class = "act3_stg44_pdw",
    quantity = 1,
    saletype = "WPN",
-   cost = 450,
+   cost = 925,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- StG44 Carbine
@@ -122,7 +122,7 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- StG44 Carbine
    class = "act3_stg44_carbine",
    quantity = 1,
    saletype = "WPN",
-   cost = 475,
+   cost = 900,
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({ -- StG44 Sniper
@@ -131,5 +131,5 @@ ACT3_BlackMarket:LoadItemToMerchant({ -- StG44 Sniper
    class = "act3_stg44_ssg44",
    quantity = 1,
    saletype = "WPN",
-   cost = 550,
+   cost = 1025,
 })

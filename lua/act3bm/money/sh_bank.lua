@@ -3,7 +3,6 @@ ACT3_BlackMarket.GetMoneyFunc = function(ply)
 end
 
 ACT3_BlackMarket.SendMoneyToPlayer = function(ply)
-   local sendamount = 0
    local entries = {
       {title = "Send Money To: " .. ply:Nick(), entertext = ""},
       {title = "Amount: $" .. tostring(sentamount)},

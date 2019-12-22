@@ -1,5 +1,5 @@
 ACT3_BlackMarket.GuidebookEntries = {
-   ["Money"] = "Money will automatically integrate into the DarkRP system if it is detected. Otherwise, it will use its own system. Gain money by killing NPCs and collecting HL2 weapons and ammo.",
+   ["Money"] = "Money will automatically integrate into the DarkRP system if it is detected. Otherwise, it will use its own system. Gain money by killing NPCs.",
    ["Ordering"] = "To place an order, you must first go into the Merchants tab and selecting the item you want, then adding it to your cart. Next, simply stand somewhere that is exposed to the sky, so the airdrop can reach you, and go into your My Cart tab, then click \"Checkout\" and then \"Place Order\". Your delivery will be sent via extra-fast delivery jet. The crate will explode into your ordered items when it touches the ground, or can be shot apart for quicker access.",
    ["The Black Market"] = "The Black Market is based on an aircraft carrier, sailing the world and supplying weapons and equipment to its seediest individuals.",
    ["ACT3"] = "ACT3 stands for Arctic's Customizable Thirdperson (Weapons) 3. It is the third instalment in Arctic's thirdperson weapons addon series, though it is the first to use the ACT moniker. Before ACT3 were ASTW2 and ASTW, \"Arctic's Simple Thirdperson Weapons\".",
