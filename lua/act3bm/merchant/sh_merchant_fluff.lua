@@ -34,8 +34,8 @@ ACT3_BlackMarket:LoadItemToMerchant({
 })
 
 ACT3_BlackMarket:LoadItemToMerchant({
-   merchant = "Granny",
+   merchant = "Historian",
    fluff = true,
    title = "About",
-   text = "Oh darling, you must be a new contact - how wonderful! \n The lovely lads around the scene gave me many titles, but you can just call me Granny. \n I'm not as fierce a lady as I used to be, but my tea and antique firearms still brings everyone to the table. \n Stop by for some guns and crumpets some time, dear?"
+   text = "Oh darling, you must be a new contact - how wonderful! \n The lovely lads around the scene gave me many titles, but you can just call me Historian. \n I'm not as fierce a lady as I used to be flying in the Royal Air Force, but my tea and antique firearms still brings everyone to the table. \n Stop by for some guns and crumpets some time, dear?"
 })

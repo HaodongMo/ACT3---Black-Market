@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/freeman/switchdiffuse"	
+                "$bumpmap" "models/freeman/switchspec"
+                  "$phongexponenttexture" "models/freeman/switchspec"
+	"$halflambert" "0"
+	"$phong" "1"
+	"$phongboost" "1.5"
+	"$phongexponent" "3"
+	"$phongtint" "[0 0 0]"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[2.0 0.5 0.05]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "3"
+	"$rimlightboost" "1.2"
+
+	"$ambientocclusion" "1"
+	"$diffuseexp" "1"
+
+
+
+}
